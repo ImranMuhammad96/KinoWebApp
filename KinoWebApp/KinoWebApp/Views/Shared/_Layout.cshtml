@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> @ViewBag.Title </title>
+    <link rel="stylesheet" type="text/css" href="~/Content/site.css">
+</head>
+<body>
+    <nav>
+        <ul class="header-ul">
+            <li class="header-li"><a class="header-a" href='../Film/Create'>Dodaj Film</a></li>
+            <li class="header-li"><a class="header-a" href='../Home/Index'>Filmy</a></li>
+            <li class="header-li"><a class="header-a" href='../Gatunek/Create'>Dodaj Gatunek</a></li>
+            <li class="header-li"><a class="header-a" href='../Home/Gat'>Gatunki</a></li>
+            <li class="header-li"><a class="header-a" href='../Kategoria/Create'>Dodaj Kategorie</a></li>
+            <li class="header-li"><a class="header-a" href='../Home/Kat'>Kategorie</a></li>
+            <li class="header-li"><a class="header-a" href='../Seans/Create'>Dodaj Seans</a></li>
+            <li class="header-li"><a class="header-a" href='../Home/Repertuar'>Repertuar</a></li>
+            <li class="header-li"><a class="header-a" href='../Home/Cennik'>Cennik</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        @RenderBody()
+    </main>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-title">O Nas</div>
+                <ul class="footer-ul">
+                    <li class="footer-li">@Html.ActionLink("Kino", "Kino")</li>
+                    <li class="footer-li">@Html.ActionLink("Kontakt", "Kontakt")</li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <div class="footer-title">Linki</div>
+                <ul>
+                    <li class="footer-li"><a href="http://www.filmweb.pl/">Filmweb</a></li>
+                    <li class="footer-li"><a href="http://www.pja.edu.pl/">PJATK</a></li>
+                </ul>
+            </div>
+            <div class="fix"></div>
+        </div>
+        <div class="footer-copyright">
+            Made by Imran Muhammad
+        </div>
+    </div>
+    
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

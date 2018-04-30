@@ -1,0 +1,28 @@
+﻿@model IList<KinoWebApp.Models.Miejsce>
+
+@{
+    ViewBag.Title = "Cennik";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Cennik</div>
+    <table>
+        <thead>
+            <tr>
+                <th>NR_SALI</th>
+                <th>NR_MIEJSCA</th>
+                <th>CENA</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>@i.NR_SALI</td>
+                    <td>@i.NR_MIEJSCA</td>
+                    <td>@i.CENA</td>
+                </tr>
+            }
+        </tbody>
+    </table>

@@ -1,0 +1,57 @@
+﻿@model KinoWebApp.Models.Film
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Edit</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="edit-body">
+        <div class="subtitle">Film</div>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.IDF)
+        
+        <br />
+            @Html.LabelFor(model => model.TYTUL)
+        <br />
+            @Html.EditorFor(model => model.TYTUL)
+            @Html.ValidationMessageFor(model => model.TYTUL)
+        <br />
+
+        <br />
+            @Html.LabelFor(model => model.REZYSER)
+        <br />
+            @Html.EditorFor(model => model.REZYSER)
+            @Html.ValidationMessageFor(model => model.REZYSER)
+        <br />
+
+        <br />
+            @Html.LabelFor(model => model.DLUGOSC)
+        <br />
+            @Html.EditorFor(model => model.DLUGOSC)
+            @Html.ValidationMessageFor(model => model.DLUGOSC)
+        <br />
+
+        <br />
+            @Html.LabelFor(model => model.ID_GAT)
+        <br />
+            @Html.EditorFor(model => model.ID_GAT)
+            @Html.ValidationMessageFor(model => model.ID_GAT)
+        <br />
+
+        <br />
+            @Html.LabelFor(model => model.IDK)
+        <br />
+            @Html.EditorFor(model => model.IDK)
+            @Html.ValidationMessageFor(model => model.IDK)
+        <br />
+
+        <input type="submit" value="Save" class="butt" />
+        @Html.ActionLink("Index", "Index", "Home")
+    </div>
+}

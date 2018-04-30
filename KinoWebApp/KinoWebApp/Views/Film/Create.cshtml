@@ -1,0 +1,32 @@
+﻿@model KinoWebApp.Models.Film
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Dodaj Film</div>
+@using (Html.BeginForm("Create", "Film"))
+{
+    <br />
+    @Html.LabelFor(m => m.TYTUL)
+    <br/>
+    @Html.TextBoxFor(m => m.TYTUL)
+    <br/>
+
+    <br />
+    @Html.LabelFor(m => m.REZYSER)
+    <br/>
+    @Html.TextBoxFor(m => m.REZYSER)
+    <br/>
+
+    <br />
+    @Html.LabelFor(m => m.DLUGOSC)
+    <br/>
+    @Html.TextBoxFor(m => m.DLUGOSC)
+    <br />
+    
+    <button class="butt" type="submit" name="action">DODAJ</button>
+    
+    @Html.ValidationSummary()
+}

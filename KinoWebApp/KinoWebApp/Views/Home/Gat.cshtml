@@ -1,0 +1,28 @@
+﻿@model IList<KinoWebApp.Models.Gatunek>
+
+@{
+    ViewBag.Title = "Gat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Kategorie</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID_GAT</th>
+            <th>NAZWA</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.ID_GAT</td>
+                <td>@i.NAZWA</td>
+                <td>@Html.ActionLink("Usun", "Delete", "Gatunek", new { id = i.ID_GAT }, i.ID_GAT) | @Html.ActionLink("Edytuj", "Edit", "Gatunek", new { id = i.ID_GAT }, i.ID_GAT)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

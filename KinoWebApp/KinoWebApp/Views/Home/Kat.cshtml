@@ -1,0 +1,30 @@
+﻿@model IList<KinoWebApp.Models.Kategoria>
+
+@{
+    ViewBag.Title = "Kat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Kategorie</div>
+<table>
+    <thead>
+        <tr>
+            <th>IDK</th>
+            <th>NAZWA</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var i in Model)
+            {
+            <tr>
+                <td>@i.IDK</td>
+                <td>@i.NAZWA</td>
+                <td>@Html.ActionLink("Usun", "Delete", "Kategoria", new { id = i.IDK }, i.IDK) | @Html.ActionLink("Edytuj", "Edit", "Kategoria", new { id = i.IDK }, i.IDK)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

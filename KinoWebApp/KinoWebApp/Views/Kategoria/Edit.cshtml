@@ -1,0 +1,29 @@
+﻿@model KinoWebApp.Models.Kategoria
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Edit</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="edit-body">
+        <div class="subtitle">Kategoria</div>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.IDK)
+
+        <br />
+        @Html.LabelFor(model => model.NAZWA)
+        <br />
+        @Html.EditorFor(model => model.NAZWA)
+        @Html.ValidationMessageFor(model => model.NAZWA)
+        <br />
+
+        <input type="submit" value="Save" class="butt" />
+        @Html.ActionLink("Index", "Index", "Home")
+    </div>
+}

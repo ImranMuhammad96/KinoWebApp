@@ -1,0 +1,43 @@
+﻿@model KinoWebApp.Models.Seans
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Edit</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="edit-body">
+        <div class="subtitle">Seans</div>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.IDS)
+
+        <br />
+        @Html.LabelFor(model => model.IDF)
+        <br />
+        @Html.EditorFor(model => model.IDF)
+        @Html.ValidationMessageFor(model => model.IDF)
+        <br />
+
+        <br />
+        @Html.LabelFor(model => model.NR_SALI)
+        <br />
+        @Html.EditorFor(model => model.NR_SALI)
+        @Html.ValidationMessageFor(model => model.NR_SALI)
+        <br />
+
+        <br />
+        @Html.LabelFor(model => model.TERMIN)
+        <br />
+        @Html.EditorFor(model => model.TERMIN)
+        @Html.ValidationMessageFor(model => model.TERMIN)
+        <br />
+
+        <input type="submit" value="Save" class="butt" />
+        @Html.ActionLink("Index", "Index", "Home")
+    </div>
+}

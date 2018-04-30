@@ -1,0 +1,20 @@
+﻿@model KinoWebApp.Models.Gatunek
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Dodaj Gatunek</div>
+@using (Html.BeginForm("Create", "Gatunek"))
+{
+    <br />
+    @Html.LabelFor(m => m.NAZWA)
+    <br />
+    @Html.TextBoxFor(m => m.NAZWA)
+    <br />
+
+    <button class="butt" type="submit" name="action">DODAJ</button>
+
+    @Html.ValidationSummary()
+}

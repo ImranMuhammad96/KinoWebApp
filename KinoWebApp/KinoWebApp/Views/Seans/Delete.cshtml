@@ -1,0 +1,38 @@
+﻿@model KinoWebApp.Models.Seans
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Delete</div>
+
+<div class="delete-question">Czy jesteś pewien, że chcesz usunąć ten wpis?</div>
+<div class="delete-body">
+    <div class="subtitle">Seans</div>
+
+    <br />
+    @Html.DisplayNameFor(model => model.Film.TYTUL)
+    <br />
+    @Html.DisplayFor(model => model.Film.TYTUL)
+    <br />
+
+    <br />
+    @Html.DisplayNameFor(model => model.Sala.NR_SALI)
+    <br />
+    @Html.DisplayFor(model => model.Sala.NR_SALI)
+    <br />
+
+    <br />
+    @Html.DisplayNameFor(model => model.TERMIN)
+    <br />
+    @Html.DisplayFor(model => model.TERMIN)
+    <br />
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Delete" class="butt" />
+        @Html.ActionLink("Index", "Index", "Home")
+    }
+</div>

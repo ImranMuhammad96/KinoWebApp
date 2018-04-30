@@ -1,0 +1,132 @@
+﻿.footer-container {
+	color: white;
+	background-color: tomato;
+	padding: 15px;
+}
+
+.footer-copyright {
+	color: white;
+	background-color: #333;
+	padding: 15px;
+}
+
+.footer-left {
+	width: 50%;
+	float: left;
+}
+
+.footer-right {
+	width: 50%;
+	float: right;
+}
+
+.footer-title {
+	font-size: 150%;
+}
+
+.fix {
+	clear: both;
+}
+
+.footer-li {
+    list-style-type: none;
+}
+
+
+
+.header-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.header-li {
+    float: left;
+}
+
+.header-li .header-a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header-li .header-a:hover {
+    background-color: #111;
+}
+
+
+
+.title {
+    color: white;
+    background-color: tomato;
+    font-size: 150%;
+    padding: 15px;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    margin: 15px;
+}
+
+table, th, td {
+    border: 1px solid red;
+}
+
+th {
+	background-color: red;
+}
+
+td {
+    background-color: yellow;
+}
+
+
+
+.info {
+    background-color: olive;
+    padding: 15px;
+}
+
+
+
+.butt {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+.subtitle {
+    font-size: 150%;
+    text-decoration: underline;
+}
+
+.delete-question {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    background-color: #444;
+    color: white;
+}
+
+.delete-body {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    background-color: #666;
+    color: white;
+}
+
+.edit-body {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    background-color: #666;
+    color: white;
+}

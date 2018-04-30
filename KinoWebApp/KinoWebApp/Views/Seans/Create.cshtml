@@ -1,0 +1,32 @@
+﻿@model KinoWebApp.Models.Seans
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title">Dodaj Seans</div>
+@using (Html.BeginForm("Create", "Seans"))
+{
+    <br />
+    @Html.LabelFor(m => m.IDF)
+    <br />
+    @Html.TextBoxFor(m => m.IDF)
+    <br />
+
+    <br />
+    @Html.LabelFor(m => m.NR_SALI)
+    <br />
+    @Html.TextBoxFor(m => m.NR_SALI)
+    <br />
+
+    <br />
+    @Html.LabelFor(m => m.TERMIN)
+    <br />
+    @Html.TextBoxFor(m => m.TERMIN)
+    <br />
+
+    <button class="butt" type="submit" name="action">DODAJ</button>
+
+    @Html.ValidationSummary()
+}
